@@ -3,55 +3,52 @@ package exercicio07;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+
 		Main app = new Main();
 		app.start();
 
 	}
 
 	private void start() {
-		// TODO Auto-generated method stub
-		
-		int[] inteiros = new int[2];
-		inteiros[0] = 5;
-		inteiros[1] = 5;
-		
-		
-		double[] doubles = new double[2];
-		doubles[0] = 10.27;
-		doubles[1] = 10.42;
-		
-		
-		String[] strings = new String[2];
-		strings[0] = "44";
-		strings[1] = "um texto qualquer";
-		
-		
-		metodo(inteiros);
-		metodo(doubles);
-		metodo(strings);
-		
-		
+
+		calcular(5, 5);
+		calcular(10.27, 8.2);
+		calcular("44", "um valor qualquer");
 	}
+
 	
-	public void metodo(int[] doisVals) {
-		
-		int resultado = 0;
-		resultado = doisVals[0] + doisVals[1];
-		System.out.println("Resultado da operação: " + resultado);
+	/**
+	 * Somar dois ints
+	 * @param primeiroValor
+	 * @param segundoValor
+	 */
+	private void calcular(int primeiroValor, int segundoValor) {
+
+		int resultado = primeiroValor + segundoValor;
+		System.out.println("INT | Resultado da operação: " + resultado);
 	}
 	
 	
-	public void metodo(double[] doisVals) {
-		double resultado = 0;
-		resultado = doisVals[0] + doisVals[1];
-		System.out.println("Resultado da operação: " + resultado);
+	/**
+	 * Subtrair dois doubles
+	 * @param primeiroValor
+	 * @param segundoValor
+	 */
+	private void calcular(double primeiroValor, double segundoValor) {
+
+		double resultado = primeiroValor - segundoValor;
+		System.out.println("DOUBLE | Resultado da operação: " + resultado);
 	}
 	
 	
-	public void metodo(String[] doisVals) {
-		double resultado = 0;
-		System.out.println(doisVals[0] + " " + doisVals[1]);
+	/**
+	 * Concatenar duas Strings
+	 * @param primeiroValor
+	 * @param segundoValor
+	 */
+	private void calcular(String primeiroValor, String segundoValor) {
+
+		String resultado = primeiroValor + segundoValor;
+		System.out.println("STRING | Resultado da operação: " + resultado);
 	}
 }
